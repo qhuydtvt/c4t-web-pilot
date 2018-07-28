@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Movie gallery7</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin-ext,vietnamese" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</head>
+<body>
+  <div class="sidebar">
+    <div class="user-info">
+      <div class="avatar">
+          <img src="http://media.we25.vn/images/26952472_1713091282086303_4057977799851170173_o.jpg" alt="">
+      </div>
+      <span class="username">
+        Hi, Anonymous
+      </span>
+    </div>
+    <div class="nav-menu">
+      <nav>
+        <ul class="border-bottom">
+          <li class="active nav-menu">
+            <a href="#">Trending Movies</a>
+          </li>
+          <li class="nav-menu">
+            <a href="#">History</a>
+          </li>
+          <li class="nav-menu">
+            <a href="#">My Collection</a>
+          </li>
+          <li class="nav-menu">
+            <a href="#">Subscriptions</a>
+          </li>
+          <li class="highlight nav-menu">
+            <a href="#">Watch Later</a>
+          </li>
+        </ul>
+        <ul>
+          <li class="nav-menu">
+            <a href="#">Recommendations</a>
+          </li>
+          <li class="nav-menu">
+            <a href="#">Top Gennes</a>
+          </li>
+          <li class="nav-menu">
+            <a href="#">Artist of the Month</a>
+          </li>
+          <li class="nav-menu">
+            <a href="#">Quote of the Week</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <div class="movie">
+    <h3 class="title">Trending Movies</h3>
+    <div class="movie-list">
+      {% for movie in movies %}
+        <a href="{{movie.link}}" target="_blank" class="movie-item">
+          <div><img src="{{movie.image_url}}" alt="{{movie.title}}"></div>
+          <h3>{{movie.title}}</h3>
+          <span>{{movie.casts}}</span>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</body>
+</html>

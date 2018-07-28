@@ -1,0 +1,133 @@
+body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.sidebar {
+    width: 250px;
+    height: 100%;
+    background-color: #1e1e30;
+    display: inline-block;
+    color: #61707d;
+    float: left;
+}
+
+.user-info {
+    padding: 50px 0 25px;
+    text-align: center;
+}
+
+.avatar {
+    overflow: hidden;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    position: relative;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.avatar img {
+    max-height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 0);
+}
+
+.username {
+    transition: all .2s ease-in-out;
+    position: relative;
+    top: -20px;
+}
+
+.username:hover {
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.nav-menu ul {
+    list-style: none;
+    padding: 50px 0;
+    margin: 0;
+}
+
+.nav-menu li.nav-menu a {
+    text-decoration: none;
+    color: #61707d;
+    padding: 15px 40px;
+    display: block;
+    transition: all .2s ease-in-out;
+}
+
+.nav-menu li.highlight a {
+    color: #2dacb7;
+}
+
+.nav-menu li.active a,
+.nav-menu li.nav-menu a:hover {
+    color: #ffffff;
+    background-color: #384a6f;
+    border-left: 5px solid #37cddb;
+    padding-left: 35px;
+}
+
+.movie {
+    width: auto;
+    height: 100%;
+    background-image: url('/static/img/bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-y: scroll;
+}
+
+.movie .title {
+    color: #ffffff;
+    font-size: 25px;
+    margin: 50px 0 0 25px;
+    font-weight: 400;
+}
+
+.movie-list {
+    padding: 25px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.movie-item {
+    padding: 15px 25px 0;
+    width: 200px;
+    margin-bottom: 25px;
+    display: inline-block;
+    overflow: hidden;
+    transition: all .2s ease-in-out;
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+}
+
+.movie-item:hover {
+    transform: scale(1.05);
+}
+
+.movie-item > div {
+    height: 270px;
+    overflow: hidden;
+    box-shadow: 0px 10px 30px 2px rgba(0,0,0,0.75);
+}
+
+.movie-item img {
+    min-width: 100%;
+}
+
+.movie-item h3 {
+    margin: 10px 0 5px;
+    color: #ffffff;
+    font-weight: 400;
+}
+
+.border-bottom {
+    border-bottom: 2px solid;
+}
