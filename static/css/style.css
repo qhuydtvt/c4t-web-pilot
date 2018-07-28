@@ -12,6 +12,11 @@ body {
     display: inline-block;
     color: #61707d;
     float: left;
+    overflow: auto;
+}
+
+.sidebar::-webkit-scrollbar { 
+    display: none; 
 }
 
 .user-info {
@@ -80,7 +85,7 @@ body {
     background-image: url('/static/img/bg.png');
     background-repeat: no-repeat;
     background-size: cover;
-    overflow-y: scroll;
+    overflow: auto;
 }
 
 .movie .title {
